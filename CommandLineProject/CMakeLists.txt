@@ -1,0 +1,3 @@
+add_executable(CommandLineProject main.cpp)
+target_include_directories(CommandLineProject PUBLIC ${CommonCodeProjectIncDir})
+target_link_libraries(CommandLineProject PUBLIC CommonCodeProject)
