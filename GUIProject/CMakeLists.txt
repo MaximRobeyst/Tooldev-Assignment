@@ -26,4 +26,12 @@ target_link_libraries(
 	Qt::Widgets
 )
 
+install(TARGETS GUIProject DESTINATION bin)
+install(FILES
+	"${QtBaseDir}/bin/Qt6Cored.dll"
+	"${QtBaseDir}/bin/Qt6Guid.dll"
+	"${QtBaseDir}/bin/Qt6Widgetsd.dll"
+		DESTINATION bin)
+	
 
+install(FILES "${QtBaseDir}/plugins/platforms/qwindowsd.dll" DESTINATION bin/platforms )

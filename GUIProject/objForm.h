@@ -1,7 +1,7 @@
 #ifndef OBJFORM_H
 #define OBJFORM_H
 
-#include "ui_objform.h"
+#include "ui_objForm.h"
 
 class ObjForm : public QWidget
 {
@@ -10,11 +10,15 @@ public:
 	explicit ObjForm(QWidget* parent = nullptr);
 
 private slots :
-	void on_inputFile_valueChanged(const std::string& inputfile);
-	void on_outputFile_valueChanged(const std::string& inputfile);
+	void on_inputButton_clicked();
+	void on_outputButton_clicked();
+	void on_buttonBox_clicked();
 
 private:
 	Ui::Form ui;
+
+	QString m_InputFilename;
+	QString m_OutputFilename;
 };
 
 #endif // !OBJFORM_H
