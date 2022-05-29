@@ -9,6 +9,7 @@ find_package(Qt6 COMPONENTS Gui)
 find_package(Qt6 COMPONENTS Widgets)
 qt_add_executable(GUIProject 
 	objForm.cpp objForm.h objForm.ui
+	minecraftscene.json minecraftscene.mtl
 	main.cpp
 )
 set_target_properties(GUIProject PROPERTIES 
@@ -26,7 +27,6 @@ target_link_libraries(
 	Qt::Widgets
 )
 
-install(TARGETS GUIProject DESTINATION bin)
 install(FILES
 	"${QtBaseDir}/bin/Qt6Cored.dll"
 	"${QtBaseDir}/bin/Qt6Guid.dll"

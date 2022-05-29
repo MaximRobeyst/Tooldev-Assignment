@@ -9,6 +9,8 @@ add_subdirectory(UnitTests)
 add_dependencies(CommandLineProject UnitTestsRun)
 add_dependencies(GUIProject UnitTestsRun)
 	
+message(STATUS "include directory: ${PROJECT_SOURCE_DIR}")
+install(TARGETS GUIProject DESTINATION bin)
 include(InstallRequiredSystemLibraries)
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
 set(CPACK_PACKAGE_VERSION_MAJOR "1")
